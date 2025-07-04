@@ -11,7 +11,7 @@ export default function InstructorsPage() {
   const jumpingInstructors = [
     {
       id: 1,
-      name: "Rebecca Chen",
+      name: "Rebecca",
       image: "/placeholder.svg?height=300&width=300",
       specialties: ["Jumping LITE", "Jumping REGULAR®"],
       certifications: ["Jumping Fitness Certified", "CPR/AED Certified", "Personal Training Certification"],
@@ -21,7 +21,7 @@ export default function InstructorsPage() {
     },
     {
       id: 2,
-      name: "Yanni Rodriguez",
+      name: "Yanni",
       image: "/placeholder.svg?height=300&width=300",
       specialties: ["Jumping INSANE BURN", "Jumping ULTIMATE"],
       certifications: ["Advanced Jumping Fitness Instructor", "HIIT Specialist", "Sports Nutrition Certified"],
@@ -41,7 +41,7 @@ export default function InstructorsPage() {
     },
     {
       id: 4,
-      name: "Vanessa Lim",
+      name: "Vanessa",
       image: "/placeholder.svg?height=300&width=300",
       specialties: ["Jumping FUSION", "Jumping ULTIMATE"],
       certifications: ["Jumping Fitness Elite Instructor", "TRX Certified", "Functional Movement Screen"],
@@ -74,7 +74,7 @@ export default function InstructorsPage() {
     },
     {
       id: 7,
-      name: "Fiona Tan",
+      name: "Fiona",
       image: "/placeholder.svg?height=300&width=300",
       specialties: ["Contemporary Dance", "Movement Therapy"],
       certifications: ["Contemporary Dance Certified", "Movement Therapy Practitioner", "Creative Arts Therapy"],
@@ -84,7 +84,7 @@ export default function InstructorsPage() {
     },
     {
       id: 8,
-      name: "Ivan Wong",
+      name: "Ivan",
       image: "/placeholder.svg?height=300&width=300",
       specialties: ["Functional Movement", "Stretch Therapy", "Mobility"],
       certifications: ["Functional Movement Screen Certified", "Stretch Therapy Practitioner", "Corrective Exercise"],
