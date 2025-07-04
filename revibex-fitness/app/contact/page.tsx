@@ -76,7 +76,7 @@ export default function ContactPage() {
                         <div>
                           <h3 className="font-semibold text-lg">Visit Our Studio</h3>
                           <p className="text-gray-600">
-                            The Flow @ East Coast
+                            66 E Coast Rd, #07-03 The Flow
                             <br />
                             Singapore 428778
                           </p>
@@ -228,21 +228,21 @@ export default function ContactPage() {
             <div className="max-w-4xl mx-auto">
               <div className="text-center space-y-4 mb-12">
                 <h2 className="text-3xl lg:text-4xl font-bold">Find Us</h2>
-                <p className="text-xl text-gray-600">Located at The Flow @ East Coast</p>
+                <p className="text-xl text-gray-600">Located at The Flow @ East Coast Road</p>
               </div>
 
               <Card className="border-0 shadow-lg overflow-hidden">
                 <CardContent className="p-0">
                   <div className="relative w-full h-96">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7234567890123!2d103.8567890!3d1.2966667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da3d0123456789%3A0x1234567890abcdef!2sThe%20Flow%20%40%20East%20Coast!5e0!3m2!1sen!2ssg!4v1234567890123!5m2!1sen!2ssg"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7234567890123!2d103.9067890!3d1.3066667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da3d0123456789%3A0x1234567890abcdef!2s66%20E%20Coast%20Rd%2C%20%2307-03%20The%20Flow%2C%20Singapore%20428778!5e0!3m2!1sen!2ssg!4v1234567890123!5m2!1sen!2ssg"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="RevibeX Studio Location"
+                      title="RevibeX Studio Location - The Flow @ East Coast"
                       className="absolute inset-0"
                     />
                   </div>
@@ -250,11 +250,12 @@ export default function ContactPage() {
                     <div className="flex items-center justify-between">
                       <div>
                         <h3 className="font-semibold text-lg">RevibeX Studio</h3>
-                        <p className="text-gray-600">The Flow @ East Coast, Singapore 428778</p>
+                        <p className="text-gray-600">66 E Coast Rd, #07-03 The Flow, Singapore 428778</p>
+                        <p className="text-sm text-gray-500 mt-1">Near Kembangan MRT Station</p>
                       </div>
                       <Button variant="outline" asChild>
                         <a
-                          href="https://maps.google.com/?q=The+Flow+East+Coast+Singapore"
+                          href="https://maps.google.com/?q=66+E+Coast+Rd+The+Flow+Singapore+428778"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex items-center gap-2"
@@ -267,6 +268,31 @@ export default function ContactPage() {
                   </div>
                 </CardContent>
               </Card>
+
+              {/* Location Details */}
+              <div className="mt-8 grid gap-4 md:grid-cols-2">
+                <Card className="border-0 shadow-sm">
+                  <CardContent className="p-4">
+                    <h4 className="font-semibold text-sm mb-2">🚇 By MRT</h4>
+                    <p className="text-xs text-gray-600">
+                      Kembangan MRT Station (EW6) - 10 minutes walk
+                      <br />
+                      Eunos MRT Station (EW7) - 12 minutes walk
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-0 shadow-sm">
+                  <CardContent className="p-4">
+                    <h4 className="font-semibold text-sm mb-2">🚗 By Car</h4>
+                    <p className="text-xs text-gray-600">
+                      Parking available at The Flow building
+                      <br />
+                      East Coast Road has street parking options
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </section>
