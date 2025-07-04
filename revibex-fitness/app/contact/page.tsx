@@ -251,7 +251,7 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-semibold text-lg">RevibeX Studio</h3>
                         <p className="text-gray-600">66 E Coast Rd, #07-03 The Flow, Singapore 428778</p>
-                        <p className="text-sm text-gray-500 mt-1">Near Kembangan MRT Station</p>
+                        <p className="text-sm text-gray-500 mt-1">Near Marine Parade MRT Station</p>
                       </div>
                       <Button variant="outline" asChild>
                         <a
@@ -275,9 +275,7 @@ export default function ContactPage() {
                   <CardContent className="p-4">
                     <h4 className="font-semibold text-sm mb-2">🚇 By MRT</h4>
                     <p className="text-xs text-gray-600">
-                      Kembangan MRT Station (EW6) - 10 minutes walk
-                      <br />
-                      Eunos MRT Station (EW7) - 12 minutes walk
+                      Marine Parade MRT Station (TE26) 
                     </p>
                   </CardContent>
                 </Card>
@@ -286,7 +284,9 @@ export default function ContactPage() {
                   <CardContent className="p-4">
                     <h4 className="font-semibold text-sm mb-2">🚗 By Car</h4>
                     <p className="text-xs text-gray-600">
-                      Parking available at The Flow building
+                      Parking is available at The Flow building
+                      <br />
+                      Parking is available i12 Katong Shopping mall and Katong Square
                       <br />
                       East Coast Road has street parking options
                     </p>
