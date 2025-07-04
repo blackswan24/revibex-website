@@ -1,7 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Heart, Users, CheckCircle, ArrowRight } from "lucide-react"
+import { CheckCircle, ArrowRight } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
@@ -30,8 +31,14 @@ export default function ProgramsPage() {
               {/* Jumping Fitness */}
               <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-8 space-y-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center">
-                    <div className="w-8 h-8 text-white font-bold text-lg">🦘</div>
+                  <div className="w-16 h-16 rounded-2xl overflow-hidden">
+                    <Image
+                      src="/placeholder.svg?height=64&width=64"
+                      alt="Jumping Fitness"
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div className="space-y-4">
                     <h3 className="text-3xl font-bold">Jumping Fitness</h3>
@@ -95,8 +102,14 @@ export default function ProgramsPage() {
               {/* Bungee Fitness */}
               <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-8 space-y-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center">
-                    <div className="w-8 h-8 text-white font-bold text-lg">🎪</div>
+                  <div className="w-16 h-16 rounded-2xl overflow-hidden">
+                    <Image
+                      src="/placeholder.svg?height=64&width=64"
+                      alt="Bungee Fitness"
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div className="space-y-4">
                     <h3 className="text-3xl font-bold">Bungee Fitness</h3>
@@ -143,8 +156,14 @@ export default function ProgramsPage() {
               {/* Pilates & Yoga */}
               <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-8 space-y-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-2xl flex items-center justify-center">
-                    <div className="w-8 h-8 text-white font-bold text-lg">🧘</div>
+                  <div className="w-16 h-16 rounded-2xl overflow-hidden">
+                    <Image
+                      src="/placeholder.svg?height=64&width=64"
+                      alt="Pilates & Yoga"
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div className="space-y-4">
                     <h3 className="text-3xl font-bold">Pilates & Yoga</h3>
@@ -193,8 +212,14 @@ export default function ProgramsPage() {
               {/* Contemporary Dance */}
               <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-8 space-y-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
-                    <div className="w-8 h-8 text-white font-bold text-lg">💃</div>
+                  <div className="w-16 h-16 rounded-2xl overflow-hidden">
+                    <Image
+                      src="/placeholder.svg?height=64&width=64"
+                      alt="Contemporary Dance"
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div className="space-y-4">
                     <h3 className="text-3xl font-bold">Contemporary Dance</h3>
@@ -251,22 +276,40 @@ export default function ProgramsPage() {
                 <h3 className="text-3xl font-bold">Why Our Programs Work</h3>
                 <div className="grid gap-6 md:grid-cols-3">
                   <div className="space-y-2">
-                    <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto">
-                      <Heart className="w-6 h-6 text-white" />
+                    <div className="w-12 h-12 rounded-xl overflow-hidden mx-auto">
+                      <Image
+                        src="/placeholder.svg?height=48&width=48"
+                        alt="Age-Appropriate"
+                        width={48}
+                        height={48}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <h4 className="font-semibold">Age-Appropriate</h4>
                     <p className="text-sm text-gray-600">Designed specifically for mature bodies and fitness levels</p>
                   </div>
                   <div className="space-y-2">
-                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto">
-                      <Users className="w-6 h-6 text-white" />
+                    <div className="w-12 h-12 rounded-xl overflow-hidden mx-auto">
+                      <Image
+                        src="/placeholder.svg?height=48&width=48"
+                        alt="Community Focused"
+                        width={48}
+                        height={48}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <h4 className="font-semibold">Community Focused</h4>
                     <p className="text-sm text-gray-600">Build lasting friendships while staying active together</p>
                   </div>
                   <div className="space-y-2">
-                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-xl flex items-center justify-center mx-auto">
-                      <CheckCircle className="w-6 h-6 text-white" />
+                    <div className="w-12 h-12 rounded-xl overflow-hidden mx-auto">
+                      <Image
+                        src="/placeholder.svg?height=48&width=48"
+                        alt="Proven Results"
+                        width={48}
+                        height={48}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <h4 className="font-semibold">Proven Results</h4>
                     <p className="text-sm text-gray-600">Evidence-based approaches for lasting health benefits</p>
