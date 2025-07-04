@@ -5,10 +5,12 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import Image from "next/image"
-import { ChevronDown } from "lucide-react"
+import { ChevronDown, Menu, X } from "lucide-react"
+import { useState } from "react"
 
 export function Header() {
   const pathname = usePathname()
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const isActive = (path: string) => pathname === path
   const isAboutActive = () => pathname === "/about" || pathname === "/instructors"
@@ -28,6 +30,8 @@ export function Header() {
             />
           </div>
         </Link>
+
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-6">
           <Link
             href="/"
@@ -94,10 +98,101 @@ export function Header() {
             Contact
           </Link>
         </nav>
-        <Button className="bg-gradient-to-r from-orange-500 to-pink-600 hover:from-orange-600 hover:to-pink-700">
+
+        {/* Desktop Get Started Button */}
+        <Button className="hidden md:flex bg-gradient-to-r from-orange-500 to-pink-600 hover:from-orange-600 hover:to-pink-700">
           <Link href="/booking">Get Started</Link>
         </Button>
+
+        {/* Mobile Menu Button */}
+        <Button variant="ghost" size="sm" className="md:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+        </Button>
       </div>
+
+      {/* Mobile Navigation Menu */}
+      {isMobileMenuOpen && (
+        <div className="absolute top-16 left-0 right-0 bg-white border-b shadow-lg md:hidden">
+          <nav className="container mx-auto px-4 py-4 space-y-4">
+            <Link
+              href="/"
+              className={`block text-sm font-medium transition-colors ${
+                isActive("/") ? "text-orange-600" : "hover:text-orange-600"
+              }`}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Home
+            </Link>
+
+            <div className="space-y-2">
+              <div className={`text-sm font-medium ${isAboutActive() ? "text-orange-600" : "text-gray-900"}`}>
+                About
+              </div>
+              <div className="pl-4 space-y-2">
+                <Link
+                  href="/about"
+                  className="block text-sm text-gray-600 hover:text-orange-600 transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  About the Studio
+                </Link>
+                <Link
+                  href="/instructors"
+                  className="block text-sm text-gray-600 hover:text-orange-600 transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Our Instructors
+                </Link>
+              </div>
+            </div>
+
+            <Link
+              href="/programs"
+              className={`block text-sm font-medium transition-colors ${
+                isActive("/programs") ? "text-orange-600" : "hover:text-orange-600"
+              }`}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Programs
+            </Link>
+            <Link
+              href="/pricing"
+              className={`block text-sm font-medium transition-colors ${
+                isActive("/pricing") ? "text-orange-600" : "hover:text-orange-600"
+              }`}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Packages
+            </Link>
+            <Link
+              href="/booking"
+              className={`block text-sm font-medium transition-colors ${
+                isActive("/booking") ? "text-orange-600" : "hover:text-orange-600"
+              }`}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Book Class
+            </Link>
+            <Link
+              href="/contact"
+              className={`block text-sm font-medium transition-colors ${
+                isActive("/contact") ? "text-orange-600" : "hover:text-orange-600"
+              }`}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Contact
+            </Link>
+
+            <div className="pt-4 border-t">
+              <Button className="w-full bg-gradient-to-r from-orange-500 to-pink-600 hover:from-orange-600 hover:to-pink-700">
+                <Link href="/booking" onClick={() => setIsMobileMenuOpen(false)}>
+                  Get Started
+                </Link>
+              </Button>
+            </div>
+          </nav>
+        </div>
+      )}
     </header>
   )
 }
