@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { Heart, Dumbbell, Flower2, Music, Brain, Users, CheckCircle } from "lucide-react"
+import { CheckCircle } from "lucide-react"
+import Image from "next/image"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
@@ -58,8 +59,14 @@ export default function AboutPage() {
                 {/* Cardiovascular Health */}
                 <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
                   <CardContent className="p-8 space-y-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-600 rounded-2xl flex items-center justify-center">
-                      <Heart className="w-8 h-8 text-white" />
+                    <div className="w-16 h-16 rounded-2xl overflow-hidden mx-auto">
+                      <Image
+                        src="/placeholder.svg?height=64&width=64"
+                        alt="Cardiovascular Health"
+                        width={64}
+                        height={64}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div className="space-y-4">
                       <h3 className="text-2xl font-bold">Cardiovascular Health</h3>
@@ -99,8 +106,14 @@ export default function AboutPage() {
                 {/* Strength & Resistance Training */}
                 <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
                   <CardContent className="p-8 space-y-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
-                      <Dumbbell className="w-8 h-8 text-white" />
+                    <div className="w-16 h-16 rounded-2xl overflow-hidden mx-auto">
+                      <Image
+                        src="/placeholder.svg?height=64&width=64"
+                        alt="Strength & Resistance Training"
+                        width={64}
+                        height={64}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div className="space-y-4">
                       <h3 className="text-2xl font-bold">Strength & Resistance Training</h3>
@@ -131,8 +144,14 @@ export default function AboutPage() {
                 {/* Joint Mobility & Recovery */}
                 <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
                   <CardContent className="p-8 space-y-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-2xl flex items-center justify-center">
-                      <Flower2 className="w-8 h-8 text-white" />
+                    <div className="w-16 h-16 rounded-2xl overflow-hidden mx-auto">
+                      <Image
+                        src="/placeholder.svg?height=64&width=64"
+                        alt="Joint Mobility & Recovery"
+                        width={64}
+                        height={64}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div className="space-y-4">
                       <h3 className="text-2xl font-bold">Joint Mobility & Recovery</h3>
@@ -181,8 +200,14 @@ export default function AboutPage() {
                 {/* Sound Therapy */}
                 <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
                   <CardContent className="p-8 space-y-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center">
-                      <Music className="w-8 h-8 text-white" />
+                    <div className="w-16 h-16 rounded-2xl overflow-hidden mx-auto">
+                      <Image
+                        src="/placeholder.svg?height=64&width=64"
+                        alt="Sound Therapy"
+                        width={64}
+                        height={64}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div className="space-y-4">
                       <h3 className="text-2xl font-bold">Sound Therapy</h3>
@@ -198,8 +223,14 @@ export default function AboutPage() {
                 {/* Meditation */}
                 <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
                   <CardContent className="p-8 space-y-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center">
-                      <Brain className="w-8 h-8 text-white" />
+                    <div className="w-16 h-16 rounded-2xl overflow-hidden mx-auto">
+                      <Image
+                        src="/placeholder.svg?height=64&width=64"
+                        alt="Meditation"
+                        width={64}
+                        height={64}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div className="space-y-4">
                       <h3 className="text-2xl font-bold">Meditation</h3>
@@ -215,8 +246,14 @@ export default function AboutPage() {
                 {/* Social Connectedness */}
                 <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
                   <CardContent className="p-8 space-y-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center">
-                      <Users className="w-8 h-8 text-white" />
+                    <div className="w-16 h-16 rounded-2xl overflow-hidden mx-auto">
+                      <Image
+                        src="/placeholder.svg?height=64&width=64"
+                        alt="Social Connectedness"
+                        width={64}
+                        height={64}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div className="space-y-4">
                       <h3 className="text-2xl font-bold">Social Connectedness</h3>
@@ -256,3 +293,4 @@ export default function AboutPage() {
     </div>
   )
 }
+
