@@ -123,11 +123,16 @@ export default function ContactPage() {
                         </div>
                         <div>
                           <h3 className="font-semibold text-lg">Follow Us</h3>
-                          <p className="text-gray-600">
-                            @revibex
+                          <a
+                            href="https://instagram.com/revibex_studio"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-600 hover:text-pink-600 transition-colors"
+                          >
+                            @revibex_studio
                             <br />
                             Stay updated with our latest classes and community
-                          </p>
+                          </a>
                         </div>
                       </CardContent>
                     </Card>
@@ -217,8 +222,57 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* FAQ Section */}
+        {/* Interactive Map Section */}
         <section className="py-20 bg-gradient-to-br from-orange-50 to-pink-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center space-y-4 mb-12">
+                <h2 className="text-3xl lg:text-4xl font-bold">Find Us</h2>
+                <p className="text-xl text-gray-600">Located at The Flow @ East Coast</p>
+              </div>
+
+              <Card className="border-0 shadow-lg overflow-hidden">
+                <CardContent className="p-0">
+                  <div className="relative w-full h-96">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7234567890123!2d103.8567890!3d1.2966667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da3d0123456789%3A0x1234567890abcdef!2sThe%20Flow%20%40%20East%20Coast!5e0!3m2!1sen!2ssg!4v1234567890123!5m2!1sen!2ssg"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="RevibeX Studio Location"
+                      className="absolute inset-0"
+                    />
+                  </div>
+                  <div className="p-6 bg-white">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h3 className="font-semibold text-lg">RevibeX Studio</h3>
+                        <p className="text-gray-600">The Flow @ East Coast, Singapore 428778</p>
+                      </div>
+                      <Button variant="outline" asChild>
+                        <a
+                          href="https://maps.google.com/?q=The+Flow+East+Coast+Singapore"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2"
+                        >
+                          <MapPin className="w-4 h-4" />
+                          Get Directions
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-center space-y-4 mb-12">
@@ -270,6 +324,12 @@ export default function ContactPage() {
           </div>
         </section>
       </main>
+
+      <Footer />
+    </div>
+  )
+}
+
 
       <Footer />
     </div>
