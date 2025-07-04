@@ -1,14 +1,17 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import Image from "next/image"
+import { ChevronDown } from "lucide-react"
 
 export function Header() {
   const pathname = usePathname()
 
   const isActive = (path: string) => pathname === path
+  const isAboutActive = () => pathname === "/about" || pathname === "/instructors"
 
   return (
     <header className="px-4 lg:px-6 h-16 flex items-center border-b bg-white/95 backdrop-blur-sm sticky top-0 z-50">
@@ -34,14 +37,30 @@ export function Header() {
           >
             Home
           </Link>
-          <Link
-            href="/about"
-            className={`text-sm font-medium transition-colors ${
-              isActive("/about") ? "text-orange-600" : "hover:text-orange-600"
-            }`}
-          >
-            About
-          </Link>
+
+          <DropdownMenu>
+            <DropdownMenuTrigger
+              className={`text-sm font-medium transition-colors flex items-center gap-1 ${
+                isAboutActive() ? "text-orange-600" : "hover:text-orange-600"
+              }`}
+            >
+              About
+              <ChevronDown className="w-3 h-3" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start" className="w-48">
+              <DropdownMenuItem asChild>
+                <Link href="/about" className="w-full cursor-pointer">
+                  About the Studio
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/instructors" className="w-full cursor-pointer">
+                  Our Instructors
+                </Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
           <Link
             href="/programs"
             className={`text-sm font-medium transition-colors ${
